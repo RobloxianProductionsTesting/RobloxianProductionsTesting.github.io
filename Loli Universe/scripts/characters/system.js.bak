@@ -71,7 +71,7 @@ function writeEncounter(scene) {
 				onmouseout="wardrobeMouseOut('basic')">
 				
 				<img class="medPicture" style="max-width:40vFemalew; filter:brightness(50%);"; id="femaletest" src="images/player/female/main.jpg"
-				onclick="writeEncounter('prologueFemale')",
+				onclick="writeEncounter('prologue')",
 			</div>
 			`;
 			// replace [\r\n]+ with , 
