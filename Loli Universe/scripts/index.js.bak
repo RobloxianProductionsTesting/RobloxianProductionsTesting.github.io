@@ -1764,7 +1764,7 @@ function writeSpeech (name, img, text, altName, altColor) {
 	var checkForError = "";
 	//If the player is using a shortcut...
 	if (img == "") {
-		finalImg = "images/"+name+"/main.jpg";
+		finalImg = "images/"+name+"/"main".jpg";
 	}
 	else {
 		if (img.includes("images") != true && img.includes("scripts") != true) {
