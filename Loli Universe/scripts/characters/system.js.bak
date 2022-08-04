@@ -61,7 +61,7 @@ function writeEncounter(scene) {
 			//writeFunction("loadEncounter('system', 'veganMenu')", "Enable vegetarian / carnivore mode, disabling straight/gay content");
 			writeText("<hr>");
 			writeCenteredText("Once you've read the information and chosen your desired settings...");
-			writeCenteredText("<span style='font-size:300%;'><bb>Choose Your Character!(WIP)</b></span>");
+			writeCenteredText("<span style='font-size:300%;'><b>Choose Your Character!(WIP)</b></span>");
 			document.getElementById('output').innerHTML += `
 			<div id="wardrobeGrid" style="display:grid; grid-template-columns:auto auto;">
 			
@@ -200,7 +200,6 @@ function writeEncounter(scene) {
 		case "AbductedMale": {
 			writeHTML(`
 			sp littlesis; BROTHER! HELP ME!!!!!!!!!!!!!
-			sp System; Encounter Not Finished
 			`);
 			writeFunction("changeLocation('playerRoom')", "Start");
 			break;
