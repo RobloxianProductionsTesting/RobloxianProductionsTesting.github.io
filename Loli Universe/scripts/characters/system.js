@@ -202,6 +202,7 @@ function writeEncounter(scene) {
 			sp littlesis; BROTHER! HELP ME!!!!!!!!!!!!!
 			sp System; Encounter Not Finished
 			`);
+			raiseTrust("friendly", 1);
 			writeFunction("changeLocation('playerRoom')", "Start");
 			break;
 		}

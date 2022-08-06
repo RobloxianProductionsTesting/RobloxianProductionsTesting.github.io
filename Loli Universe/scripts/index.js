@@ -49,7 +49,8 @@ var data = {
 		color: "#86b4dc",
 	},
 	story: [
-        {index: "littlesis", 		met: false, fName: "Nylah", lName: " ", 		trust: 0, encountered: false, textEvent: "", color: "#ea89a8", author: "xEmmy", artist: "Unknown", textHistory: "", unreadText: false},
+        {index: "littlesis", 		met: false, fName: "Nylah", lName: " ", 		trust: 0, encountered: false, textEvent: "", color: "#ea89a8", author: "Alexander192", artist: "Unknown", textHistory: "", unreadText: false},
+		{index: "friendly", 		met: false, fName: "Clara", lName: " ", 		trust: 0, encountered: false, textEvent: "", color: "#ea89a8", author: "Alexander192", artist: "Unknown", textHistory: "", unreadText: false},
 		/*{index: "mom", 			met: false, fName: "Emily", lName: "Smith", 		trust: 0, encountered: false, textEvent: "", color: "#CCCCCC", author: "NoodleJacuzzi", artist: "Enoshima Iki", textHistory: "", unreadText: false},
 		{index: "kuro", 		met: false, fName: "Steph", lName: "Black", 		trust: 0, encountered: false, textEvent: "", color: "#fde1a5", author: "NoodleJacuzzi", artist: "Enoshima Iki", textHistory: "", unreadText: false},
 		{index: "tomgirl", 		met: false, fName: "Sam", lName: "White", 			trust: 0, encountered: false, textEvent: "", color: "#a79e9a", author: "NoodleJacuzzi", artist: "Nagi Ichi", textHistory: "", unreadText: false},
@@ -109,7 +110,7 @@ var data = {
 
 var maleCharacterList = "";
 
-var femaleCharacterList = "trinity3rdgrade,";
+var femaleCharacterList = "littlesis,";
 
 var menuButtons = [
 {ID: "invButton", name:"INVENTORY",},
