@@ -50,7 +50,7 @@ function writeEncounter(name) { //Plays the actual encounter.
 				t <span style="color:red; size: 200%;">This is big, red text!</span>
 			`);
 			passTime();
-			raiseTrust("mom", 1);
+			raiseTrust("friendly", 1);
 			writeFunction("writeEncounter('placeholder')", "Continue");
 			writeFunction("changeLocation(data.player.location)", "Finish");
 			break;

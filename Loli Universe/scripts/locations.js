@@ -21,7 +21,7 @@ var locationArray = [
 		{name: "Shopping District", top: 60, left: 0, type: "location", target: "shoppingDistrict", time: "MorningEvening",},
 	],},
 	{index: "apartmentOutside", name: "Outside Your Apartment", buttons: [
-		{name: "Your Home", top: 55, left: 65, type: "location", target: "cellsDungeon", time: "MorningEvening",},
+		{name: "Your Home", top: 55, left: 65, type: "location", target: "playerRoom", time: "MorningEvening",},
 		{name: "Head into Town", top: 50, left: 28, type: "location", target: "street", time: "MorningEvening",},
 	],},
 	{index: "schoolEntrance", name: "School Entrance", buttons: [
@@ -49,7 +49,7 @@ var locationArray = [
 	],},
 	{index: "playerOffice", name: "Your Office", buttons: [
 		{name: "Back to the Hallway", top: 79, left: 35, type: "location", target: "northHallway", time: "MorningEvening",},
-		{name: "Go Back Home", top: 25, left: 41, type: "location", target: "cellsDungeon", time: "MorningEvening",},
+		{name: "Go Back Home", top: 25, left: 41, type: "location", target: "playerRoom", time: "MorningEvening",},
 	],},
 	{index: "teacherLounge", name: "Teacher's Lounge", buttons: [
 		{name: "Back to the Hallway", top: 79, left: 35, type: "location", target: "northHallway", time: "MorningEvening",},
@@ -95,7 +95,7 @@ var locationArray = [
 		{name: "University 1F", top: 35, left: 23, type: "location", target: "schoolEntrance", time: "MorningEvening",},
 		{name: "University 2F", top: 20, left: 23, type: "location", target: "northHallway", time: "MorningEvening",},
 		{name: "Streets", top: 55, left: 40, type: "location", target: "street", time: "MorningEvening",},
-		{name: "Your Home", top: 45, left: 70, type: "location", target: "cellsDungeon", time: "MorningEvening",},
+		{name: "Your Home", top: 45, left: 70, type: "location", target: "playerRoom", time: "MorningEvening",},
 		{name: "Shopping District", top: 20, left: 60, type: "location", target: "shoppingDistrict", time: "MorningEvening",},
 		{name: "Vintage Street", top: 2, left: 35, type: "location", target: "vintageStreet", time: "MorningEvening",},
 		{name: "Park District", top: 65, left: 10, type: "location", target: "parkDistrict", time: "MorningEvening",},
@@ -144,24 +144,24 @@ function changeLocation(n) {
 			document.getElementById('output').innerHTML = '';
 			writeText("You encountered a bug! Error code: locationTargetFailed");
 			writeText("Send me a message with where you were and what button you clicked on, thanks!");
-			writeFunction("changeLocation('cellsDungeon')", "Go Back Home");
+			writeFunction("changeLocation('playerRoom')", "Go Back Home");
 		}
 	}
 	else {
 		var bg = "images/locations/" + locationArray[locationTarget].index + data.player.time + ".jpg";
 		changeBG(locationArray[locationTarget].bg);
-		if (data.player.time == "Night" && data.player.location != "cellsDungeon") {
+		if (data.player.time == "Night" && data.player.location != "playerRoom") {
 			if (checkFlag("mom", "megaEasy") == true) {
-				n = 'cellsDungeon';
-				data.player.location = "cellsDungeon";
-				changeLocation("cellsDungeon");
+				n = 'playerRoom';
+				data.player.location = "playerRoom";
+				changeLocation("playerRoom");
 			}
 			else {
 				console.log(data.player.location);
-				n = 'cellsDungeon';
-				data.player.location = "cellsDungeon";
-				writeText("The sun is going down. You head back to your dungeon for the night, Your slaves must miss you by now");
-				writeFunction("changeLocation('cellsDungeon')", "Go Back Home");
+				n = 'playerRoom';
+				data.player.location = "playerRoom";
+				writeText("As the Sun Sets over the Horizon you decide it is late and head home.");
+				writeFunction("changeLocation('playerRoom')", "Go Back Home");
 			}
 		}
 		else {
