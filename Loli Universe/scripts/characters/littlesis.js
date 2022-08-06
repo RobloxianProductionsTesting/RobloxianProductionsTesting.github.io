@@ -28,7 +28,7 @@ function writeEncounter(name) { //Plays the actual encounter.
 			writeHTML(`
 				im profile.jpg;
 				t Placeholder text
-				sp mom; Placeholder dialogue.
+				sp littlesis; Placeholder dialogue.
 				sp player; Placeholder response.
 				t ...
 				t This is regular text.
