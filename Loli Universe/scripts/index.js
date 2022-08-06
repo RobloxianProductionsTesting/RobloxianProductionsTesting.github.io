@@ -3911,12 +3911,12 @@ function diagnostic() {
 			data.player.gender = "man";
 			data.player.title = "Mister";
 			data.player.honorific = "sir";
-			if (checkBody("basic") != true) {
-				var goof = {index: "basic", artist: "",};
+			if (checkBody("male") != true) {
+				var goof = {index: "male", artist: "",};
 				data.bodytypes.push(goof);
 			}
 			for (i = 0; i < data.bodytypes.length; i++) {
-				if (data.bodytypes[i].index.includes('basic')) {
+				if (data.bodytypes[i].index.includes('male')) {
 					changeBody(i);
 					break;
 				}
@@ -3928,12 +3928,12 @@ function diagnostic() {
 			data.player.gender = "woman";
 			data.player.title = "Miss";
 			data.player.honorific = "ma'am";
-			if (checkBody("basil") != true) {
-				var goof = {index: "basil", artist: "Art by Ishimura",};
+			if (checkBody("female") != true) {
+				var goof = {index: "female", artist: "Art by Ishimura",};
 				data.bodytypes.push(goof);
 			}
 			for (i = 0; i < data.bodytypes.length; i++) {
-				if (data.bodytypes[i].index.includes('basil')) {
+				if (data.bodytypes[i].index.includes('female')) {
 					changeBody(i);
 					break;
 				}
@@ -4005,14 +4005,14 @@ function diagnostic() {
 			break;
 		}
 		case "stiggy752": {
-			data.player.style = "basic";
+			data.player.style = "male";
 			updateMenu();
 			writeEncounter('cheat');
 			writeSpecial("Basic visual style active!");
 			break;
 		}
 		case "baddy": {
-			data.player.style = "basic";
+			data.player.style = "male";
 			updateMenu();
 			writeEncounter('cheat');
 			writeSpecial("Basic visual style active!");

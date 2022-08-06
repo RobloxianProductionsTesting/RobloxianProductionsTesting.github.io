@@ -67,8 +67,8 @@ function writeEncounter(scene) {
 			
 				<img class="medPicture" style="max-width:40vw; filter:brightness(50%);"; id="Shadow" src="images/player/male/main.jpg" 
 				onclick="writeEncounter('prologueMale')",
-				onmouseover="wardrobeMouseOver('basic')"
-				onmouseout="wardrobeMouseOut('basic')">
+				onmouseover="wardrobeMouseOver('male')"
+				onmouseout="wardrobeMouseOut('male')">
 				
 				<img class="medPicture" style="max-width:40vFemalew; filter:brightness(50%);"; id="femaletest" src="images/player/female/main.jpg"
 				onclick="writeEncounter('prologueFemale')",
@@ -625,7 +625,7 @@ function writeEncounter(scene) {
 			break;
 		}
 		case "basicStyle": {
-			data.player.style = "basic";
+			data.player.style = "male";
 			writeEncounter("styleBooks");
 			writeSpecial("Visual style 'Basic' applied! Very special thank you to stiggy 752!");
 			break;

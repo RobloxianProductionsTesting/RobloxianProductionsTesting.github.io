@@ -1,6 +1,6 @@
 var character = {index: "friendly", fName: "", lName: "", trust: 0, encountered: false, textEvent: "", met: false, color: "#F683C8", author: "Alexander192", artist: "", textHistory: "", unreadText: false,};
 
-if(checkBody("basil") != true){
+if(checkBody("female") != true){
 var logbook = {
 	index: "friendly", 
 	desc: "Your Best Friend",
@@ -12,7 +12,7 @@ var logbook = {
 	author: "",
 };
 };
-if(checkBody("basic") != true){
+if(checkBody("male") != true){
 var logbook = {
 	index: "friendly", 
 	desc: "Your Sister's Best Friend",
