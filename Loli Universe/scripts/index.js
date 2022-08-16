@@ -862,10 +862,14 @@ function AbductedPlayerMale() {
 	loadEncounter("system", "AbductedMale");
 }
 
-function renamePlayerAlt() {
+function renamePlayerFemale() {
 	data.player.name = document.getElementById('nameSubmission').value;
-	changeLocation(data.player.location);
+	loadEncounter("system", "prologueFemale2");
 }
+function AbductedPlayerFemale() {
+	loadEncounter("system", "AbductedFemale");
+}
+
 
 function renameEveryone() {
 	for (i = 0; i < data.story.length; i++) {

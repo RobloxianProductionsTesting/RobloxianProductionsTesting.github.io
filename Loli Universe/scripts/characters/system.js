@@ -65,12 +65,12 @@ function writeEncounter(scene) {
 			document.getElementById('output').innerHTML += `
 			<div id="wardrobeGrid" style="display:grid; grid-template-columns:auto auto;">
 			
-				<img class="medPicture" style="max-width:40vw; filter:brightness(50%);"; id="Shadow" src="images/player/male/main.jpg" 
+				<img class="medPicture" style="max-width:40vw; filter:brightness(50%);"; id="male" src="images/player/male/main.jpg" 
 				onclick="writeEncounter('prologueMale')",
 				onmouseover="wardrobeMouseOver('male')"
 				onmouseout="wardrobeMouseOut('male')">
 				
-				<img class="medPicture" style="max-width:40vFemalew; filter:brightness(50%);"; id="femaletest" src="images/player/female/main.jpg"
+				<img class="medPicture" style="max-width:40vw; filter:brightness(50%);"; id="female" src="images/player/female/main.jpg"
 				onclick="writeEncounter('prologueFemale')",
 			</div>
 			`;
@@ -162,8 +162,8 @@ function writeEncounter(scene) {
 			break;
 		}
 		case "prologueFemale": {
-			writeText("Input your name <input type='text' id='nameSubmission' value='Template'>");
-			writeText("Character Not Implemented yet");
+			writeText("Input your name <input type='text' id='nameSubmission' value='Nylah'>");
+			writeFunction("renamePlayerFemale()", "Begin the story");
 			break;
 		}
 		case "prologueMale2": {
@@ -197,7 +197,6 @@ function writeEncounter(scene) {
             writeFunction("AbductedPlayerMale()", "You Fall Asleep");
 			break;
 		}
-		
 		case "AbductedMale": {
 			writeHTML(`
 			sp littlesis; BROTHER! HELP ME!!!!!!!!!!!!!
@@ -207,6 +206,48 @@ function writeEncounter(scene) {
 			writeFunction("changeLocation('playerRoom')", "Start");
 			break;
 		}
+		
+		case "prologueFemale2": {
+			writeBig("images/player/female/main.jpg");
+			writeText("You are " + data.player.name + ", An Elementary Schooler in the 5th grade");
+			writeText("You just moved to a new small town in Nevada with your dad who is your only parent and your little sister who is in 3rd Grade");
+			writeBig("images/Intro/CarDrivingToTown.jpg");
+			writeHTML(`
+				sp System; Dad and Player do not exist yet!
+				sp Dad; Ok Kids see over there?
+				t he points to a couple of small buildings to your left
+				sp Dad; That is our new home
+				sp littlesis; Thats our home? It's in the middle of nowhere!
+				sp player; Yeah Dad! What are we supposed to do out here!
+				sp Dad; Now Now kids. This place isn't as bad as you think
+				sp littlesis; ....this place makes me feel uneasy
+				t You hug her
+				sp player; It's ok i will protect my little sis
+				t she leans on you
+				sp littlesis; Thank you Big Brother.
+				t ...
+				t after hours of work helping your dad move the boxes into the house with your little sister you Fall onto your bed tired.
+				sp player; Ugh that was alot of work.
+				t Your sister is on her bed on the other side of the room already asleep, and she didn't even change into her pajamas.
+				sp player; Cute.
+				sp player; Well i should get changed and to bed.
+				t you get undressed since your sister is sound asleep and get changed into pajamas.
+				sp player; God i am tired. I hope tomorrow is easier
+				t you get into bed and fall asleep.
+			`);
+            writeFunction("AbductedPlayerFemale()", "You Fall Asleep");
+			break;
+		}
+		case "AbductedFemale": {
+			writeHTML(`
+			sp littlesis; BROTHER! HELP ME!!!!!!!!!!!!!
+			sp System; Encounter Not Finished
+			`);
+			raiseTrust("friendly", 1);
+			writeFunction("changeLocation('playerRoom')", "Start");
+			break;
+		}
+		
 		case "oretekiTest": {
 			writeBig("images/porn/5A-3.jpg", "Art by Oreteki18Kin");
 			writeBig("images/principal/070.jpg", "Art by Oreteki18Kin");
