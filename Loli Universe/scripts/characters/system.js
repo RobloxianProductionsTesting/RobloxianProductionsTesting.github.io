@@ -172,7 +172,6 @@ function writeEncounter(scene) {
 			writeText("You just moved to a new small town in Nevada with your dad who is your only parent and your little sister who is in 3rd Grade");
 			writeBig("images/Intro/CarDrivingToTown.jpg");
 			writeHTML(`
-				sp System; Dad and Player do not exist yet!
 				sp Dad; Ok Kids see over there?
 				t he points to a couple of small buildings to your left
 				sp Dad; That is our new home
