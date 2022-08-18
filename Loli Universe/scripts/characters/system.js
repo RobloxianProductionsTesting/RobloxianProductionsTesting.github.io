@@ -157,7 +157,7 @@ function writeEncounter(scene) {
 			break;
 		}
 		case "prologueMale": {
-			writeText("Input your name <input type='text' id='nameSubmission' value='Shadow'>");
+			writeText("Input your name <input type='text' id='nameSubmission' value='MaleMC'>");
 			writeFunction("renamePlayerMale()", "Begin the story");
 			break;
 		}
