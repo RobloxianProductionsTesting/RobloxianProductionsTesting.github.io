@@ -183,7 +183,9 @@ function writeEncounter(scene) {
 				sp player; It's ok i will protect my little sis
 				t she leans on you
 				sp littlesis; Thank you Big Brother.
-				t ...
+				`);
+			writeBig("images/Intro/CarArrivingAtHouse.jpg");
+			writeHTML(`
 				t after hours of work helping your dad move the boxes into the house with your little sister you Fall onto your bed tired.
 				sp player; Ugh that was alot of work.
 				t Your sister is on her bed on the other side of the room already asleep, and she didn't even change into her pajamas.

@@ -1,13 +1,13 @@
-var character = {index: "littlesis", fName: "Nylah", lName: "", trust: 0, encountered: false, textEvent: "", met: false, color: "#F25394", author: "Alexander192", artist: "N/A", textHistory: "", unreadText: false,};
+var character = {index: "neet", fName: "Tia", lName: "Sun", trust: 0, encountered: false, textEvent: "", met: false, color: "#F683C8", author: "NoodleJacuzzi", artist: "Enoshima Iki", textHistory: "", unreadText: false,};
 
 var logbook = {
 	index: "", 
 	desc: "",
 	body: "",
-	clothes: "During the schhol day she wears her school uniform. While not in school you will find her either in he pajama's or naked in her room asleep.",
+	clothes: "",
 	home: "",
 	tags: "",
-	artist: "Alexander192",
+	artist: "",
 	author: "",
 };
 
@@ -16,8 +16,7 @@ var newItems = [
 ];
 
 var encounterArray = [//Lists encounters as they appear on the map. Nonrepeatable, only one per day per character by default.
-	//{index: "placeholder", name: "", requirements: "?trust principal 10000;", altName: "", altImage: "",},
-	{index: "placeholder", name: "", requirements: "?trust littlesis 0; ?location playerRoom;", altName: "", altImage: "",},
+	{index: "placeholder", name: "", requirements: "?trust principal 10000;", altName: "", altImage: "",},
 ];
 
 function writeEncounter(name) { //Plays the actual encounter.
@@ -28,7 +27,7 @@ function writeEncounter(name) { //Plays the actual encounter.
 			writeHTML(`
 				im profile.jpg;
 				t Placeholder text
-				sp littlesis; Placeholder dialogue.
+				sp mom; Placeholder dialogue.
 				sp player; Placeholder response.
 				t ...
 				t This is regular text.
@@ -37,7 +36,7 @@ function writeEncounter(name) { //Plays the actual encounter.
 				t <span style="color:red; size: 200%;">This is big, red text!</span>
 			`);
 			passTime();
-			raiseTrust("littlesis", 1);
+			raiseTrust("mom", 1);
 			writeFunction("writeEncounter('placeholder')", "Continue");
 			writeFunction("changeLocation(data.player.location)", "Finish");
 			break;
